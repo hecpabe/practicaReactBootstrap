@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Info Card
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para las tarjetas de información de la aplicación
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
@@ -22,7 +30,14 @@ function InfoCard({cardTitle, cardText, collapseText, collapseID}){
                 
                 {/* COLLAPSE */}
                 <p>
-                    <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target={"#" + collapseID} aria-expanded="false" aria-controls={collapseID}>
+                    <button 
+                        className="btn btn-primary" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target={"#" + collapseID} 
+                        aria-expanded="false" 
+                        aria-controls={collapseID}
+                    >
                         Más información
                     </button>
                 </p>

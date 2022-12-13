@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Users List
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para hacer la lista de usuarios encontrados tras la búsqueda
+    Fecha: 13/12/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
@@ -16,14 +24,17 @@ function UsersList({users, searchValue, setUserProfileInfo}){
     // Obtenemos los usuarios que coinciden con la búsqueda
     users.map((user) => {
 
+        // Si el usuario contiene el string buscado
         if(user.name.toLowerCase().includes(searchValue.toLowerCase())){
 
+            // Lo agregamos a la lista
             return searchContainerContent.push(
                 <UserCard user={user} setUserProfileInfo={setUserProfileInfo} />
             );
 
         }
 
+        // Sino no agregamos nada
         return "";
 
     });
@@ -31,6 +42,7 @@ function UsersList({users, searchValue, setUserProfileInfo}){
     // Return del código HTML
     return(
         <>
+            {/* Contenedor con la lista de tarjetas creadas */}
             <div className="container">
                 {searchContainerContent}
             </div>

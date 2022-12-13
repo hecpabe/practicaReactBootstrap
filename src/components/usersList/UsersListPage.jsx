@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Users List Page
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente que alberque la página de usuarios encontrados tras la búsqueda
+    Fecha: 13/12/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";

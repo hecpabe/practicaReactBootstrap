@@ -5,6 +5,7 @@
     Nombre: Héctor Paredes Benavides
     Descripción: Creamos el index para inicializar las diferentes rutas de nuestra página web
     Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
 */
 
 /* Preprocesado */
@@ -20,27 +21,6 @@ import reportWebVitals from './reportWebVitals';
 import App from "./App";
 
 /* Ejecución del Programa */
-// Creamos el router y definimos las rutas
-/* const router = createBrowserRouter(createRoutesFromElements(
-  <>
-    <Route path='/' element={<Home />} />
-    <Route path='/users' element={<UsersInsertion />} />
-    <Route path='/matches' element={<MatchesPage />} />
-    <Route path='/scoreboard' element={<ScoreboardPage />} />
-  </>
-));
- */
-// Creamos el DOM en base a nuestro router
-//createRoot(document.getElementById('root')).render(<RouterProvider router={router} />);
-
-/* const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  rootElement
-) */
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

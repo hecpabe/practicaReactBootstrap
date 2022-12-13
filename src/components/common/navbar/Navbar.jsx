@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Navbar
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para crear una barra de navegación para la aplicación
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React, { useRef } from 'react';
@@ -27,14 +35,22 @@ function Navbar({activeLinkName, setSearchValue}){
     })
 
     /* Event Handlers */
+    /* Search Event Handler: Event handler con el que controlamos cuando el usuario pulsa el botón de buscar usuario
+        Parámetros: Ninguno.
+        Retorno: Ninguno.
+        Precondición: La barra de búsqueda debe estar referenciada con el useRef de la función
+        Complejidad Temporal: O(1)
+        Complejidad Espacial: O(1)
+    */
     const searchEventHandler = () => {
 
         // Variables necesarias
         var searchInputValue;
 
-        // Obtenemos el valor del input de search
+        // Obtenemos el valor del input de la barra de búsqueda
         searchInputValue = searchInputRef.current.value;
 
+        // Si el usuario ha introducido algo lo establecemos como valor de búsqueda y nos dirigimos a la ruta para búsquedas
         if(searchInputValue !== ""){
 
             setSearchValue(searchInputValue);
@@ -84,7 +100,7 @@ function Navbar({activeLinkName, setSearchValue}){
                     </ul>
                     
                     {/* Search */}
-                    <div class="d-flex ms-auto" role="search">
+                    <div className="d-flex ms-auto" role="search">
                         <input className="form-control me-2" type="search" placeholder="Buscar Usuario" aria-label="Search" ref={searchInputRef} />
                         <button className="btn btn-outline-success" onClick={searchEventHandler} >Buscar</button>
                     </div>

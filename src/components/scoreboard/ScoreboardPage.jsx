@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Scoreboard Page
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para albergar la página de puntuaciones
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
@@ -22,6 +30,7 @@ function ScoreboardPage({users, setSearchValue}){
 
             <br />
             <br />
+            {/* Tabla de Puntuaciones */}
             <div className="container mt-5">
                 <div className="container d-flex justify-content-center">
                     <h1>Tabla de Puntuaciones</h1>

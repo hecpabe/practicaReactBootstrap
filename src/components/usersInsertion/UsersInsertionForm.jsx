@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Users Insertion Form
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para hacer un formulario de inserción de usuarios
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
@@ -15,7 +23,15 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
     // Inicializamos las referencias
     const userNameFieldRef = useRef();
 
-    // Codificación de EventHandlers
+    /* Codificación de Event Handlers */
+    /* Add User Button Event Handler: Event Handler con el que insertamos un nuevo usuario introducido en el formulario al pulsar el botón de insertar 
+    usuario
+        Parámetros: Ninguno.
+        Retorno: Ninguno.
+        Precondición: El campo de nombre de usuario tiene que estar referenciado con el useRef de la función y este debe tener contenido.
+        Complejidad Temporal: O(1)
+        Complejidad Espacial: O(1)
+    */
     const addUserButtonEventHandler = () => {
 
         // Varaibles necesarias
@@ -35,6 +51,7 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
         }
         else{
 
+            // Si no nos han metido datos válidos mostramos error y nos salimos de la función
             setShow(true);
             setAlertType("error");
             setAlertMessage("No se ha introducido el usuario porque el campo está vacío");
@@ -43,7 +60,7 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
 
         }
 
-        // Mostramos que todo ha ido bien
+        // Mostramos el mensaje de información
         setShow(true);
         setAlertType("success");
         setAlertMessage("Se ha agregado correctamente al usuario '" + userName + "'");
@@ -53,6 +70,13 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
 
     }
 
+    /* Import Users button Event Handler: Event Handler con el que obtenemos el JSON de usuarios de JSON Placeholder al pulsar el botón de importar usuarios
+        Parámetros: Ninguno.
+        Retorno: Ninguno.
+        Precondición: Ninguna.
+        Complejidad Temporal: O(1) + await (Función asíncrona)
+        Complejidad Espacial: O(n) n-> Cantidad de usuarios en JSON Placeholder
+    */
     const importUsersButtonEventHandler = () => {
 
         // Realizamos la petición de los usuarios a JSON Placeholder
@@ -63,13 +87,22 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
 
         }).then(function (response){
 
+            // Procesamos la información retornada
             addImportedUsers(response.data)
 
         });
 
     }
 
-    // Codificación de funciones
+    /* Codificación de Funciones */
+    /* Add Imported Users: Función con la que alimentamos la lista de usuarios en función de los datos que recibimos de JSON PLaceholder
+        Parámetros:
+            0: [JSON] Información devuelta por JSON Placeholder
+        Retorno: Ninguno.
+        Precondición: Ninguna.
+        Complejidad Temporal: O(n) n-> Cantidad de usuarios devueltos
+        Complejidad Espacial: O(n) n-> Cantidad de usuarios devueltos
+    */
     const addImportedUsers = (responseData) => {
 
         // Variables necesarias
@@ -83,6 +116,7 @@ function UsersInsertionForm({users, setUsers, setShow, setAlertType, setAlertMes
             return usersCopy.push({id: v4(), name: newUser.name, wins: 0, draws: 0, lost: 0});
         })
 
+        // Mostramos el mensaje de información
         setShow(true);
         setAlertType("success");
         setAlertMessage("Se han importado los usuarios correctamente");

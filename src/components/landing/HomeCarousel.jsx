@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Home Carousel
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para un carousel que muestre información sobre la aplicación
+    Fecha: 29/12/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas
 import React from "react";

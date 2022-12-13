@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Error Alert
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para generar una alerta de error
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";

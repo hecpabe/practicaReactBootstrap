@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Matches Board Winner Selector
+    Name: Héctor Paredes Benavides
+    Descripción: Creamos un componente para hacer el selector de ganador de un partido de la tabla de partidos
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas externas
 import React from "react";

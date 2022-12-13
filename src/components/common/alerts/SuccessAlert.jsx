@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Success Alert
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para las alertas de tipo success
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";

@@ -1,5 +1,13 @@
 
 
+/*
+    Título: App
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un programa para gestionar la aplicación web
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React, { useState } from "react";

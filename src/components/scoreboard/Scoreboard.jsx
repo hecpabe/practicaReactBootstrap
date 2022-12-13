@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Scoreboard
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para la tabla de puntuaciones de nuestra aplicación
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
@@ -66,7 +74,10 @@ function Scoreboard({users}){
 
     // Return del código HTML
     return(
+        /* Tabla de Puntuaciones */
         <table className="table table-striped table-hover">
+
+            {/* Cabecera */}
             <thead>
                 <tr>
                     <th scope="col">Jugador</th>
@@ -75,6 +86,8 @@ function Scoreboard({users}){
                     <th scope="col">Derrotas</th>
                 </tr>
             </thead>
+
+            {/* Contenido de la Tabla */}
             <tbody>
                 {tableRows}
             </tbody>

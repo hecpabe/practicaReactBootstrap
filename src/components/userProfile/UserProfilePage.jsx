@@ -1,4 +1,10 @@
-
+/*
+    Título: User Profile Page
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para albergar la página de perfil del usuario
+    Fecha: 13/12/2022
+    Última Modificación: 13/12/2022
+*/
 
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
@@ -30,14 +36,16 @@ function UserProfilePage({userProfileInfo, setSearchValue}){
                             <div className="d-flex text-black">
                             <div className="flex-shrink-0">
                                 <img src="userIcon.png"
-                                alt="Generic placeholder image" className="img-fluid"
+                                alt="Icono de Usuario" className="img-fluid"
                                 style={{width: "180px", borderRadius: "10px"}} />
                             </div>
                             <div className="flex-grow-1 ms-3">
+                                {/* Nombre del Usuario (Estado) */}
                                 <h5 className="mb-1">{userProfileInfo.name}</h5>
                                 <p className="mb-2 pb-1" style={{color: "#2b2a2a"}}>Usuario</p>
                                 <div className="d-flex justify-content-start rounded-3 p-2 mb-2"
                                 style={{backgroundColor: "#efefef"}}>
+                                {/* Estadísticas del Usuario (Estado) */}
                                 <div>
                                     <p className="small text-muted mb-1">Victorias</p>
                                     <p className="mb-0">{userProfileInfo.wins}</p>
@@ -51,6 +59,7 @@ function UserProfilePage({userProfileInfo, setSearchValue}){
                                     <p className="mb-0">{userProfileInfo.lost}</p>
                                 </div>
                                 </div>
+                                {/* Botones de Desplazamiento */}
                                 <div className="d-flex pt-1">
                                     <Link to="/scoreboard" className="btn btn-outline-primary me-1 flex-grow-1">Ver Puntuaciones</Link>
                                     <Link to="/matches" className="btn btn-primary flex-grow-1">Ver Partidos</Link>

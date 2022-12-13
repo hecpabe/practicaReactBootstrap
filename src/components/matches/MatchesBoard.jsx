@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Matches Board
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para gestionar la tabla de partidos
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";

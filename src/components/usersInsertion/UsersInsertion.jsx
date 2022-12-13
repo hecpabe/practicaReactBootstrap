@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Users Insertion
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para albergar la página de la inserción de usuarios
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React, { useState } from "react";
@@ -21,6 +29,7 @@ function UsersInsertion({users, setUsers, setSearchValue}){
     // Return del código HTML
     return(
         <>
+            {/* Navbar */}
             <Navbar activeLinkName="Users" setSearchValue={setSearchValue} />
 
             <br />

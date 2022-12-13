@@ -1,5 +1,13 @@
 
 
+/*
+    Título: Info Cards
+    Nombre: Héctor Paredes Benavides
+    Descripción: Creamos un componente para generar un conjunto de tarjetas que se muestren seguidas
+    Fecha: 29/11/2022
+    Última Modificación: 13/12/2022
+*/
+
 /* Preprocesado */
 // Inclusión de bibliotecas básicas
 import React from "react";
